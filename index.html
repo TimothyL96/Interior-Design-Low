@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!-- Originally designed by-->
 <!--
 	Landed by HTML5 UP
 	html5up.net | @n33co
@@ -29,6 +30,8 @@
         <link rel="icon" type="image/vnd.microsoft.icon" href="assets/css/images/myicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -67,17 +70,40 @@
 				</header>
 
 			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>The future of design has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just creative design. Lots of new design.</p>
-						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+
+
+            <section id="banner">
+                <div class="content1">
+                <div>
+                    <header>
+                        <h2>The future of design has landed</h2>
+                        <p>And there are no hoverboards or flying cars.<br />
+                        Just creative design. Lots of new design.</p>
+                    </header>
+                    <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+
+				</div>
+				<div>
+                   <header>
+                        <h2>Slide one!!!!!</h2>
+                        <p>weeehaaa.<br />
+                        Just creative design. Lots of new design.</p>
+                    </header>
+				   <span class="image"><img src="images/banner.jpg" alt="" width="100px" height="100px"/></span>
+                </div>
+                <div>
+                   <header>
+                        <h2>Slide !!!!! two</h2>
+                        <p>wooohoooo.<br />
+                        Just creative design. Lots of new design.</p>
+                    </header>
+				   <span class="image"><img src="images/pic011.jpg" alt="" width="100px" height="100px"/></span>
+                </div>
+                </div>
+                <a href="#one" class="goto-next scrolly">Next</a>
+           </section>
+
+
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
@@ -140,10 +166,11 @@
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
 					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
+					<a href="#five" class="goto-next scrolly">Next</a>
+				<!--	<i class="fa fa-envelope fa-5x" style="position:relative;color:grey;">-->
 				</section>
 
-			<!-- Four -->
+			<!-- Four --><!--
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
@@ -190,15 +217,15 @@
 							</ul>
 						</footer>
 					</div>
-				</section>
+				</section>-->
 
 			<!-- Five -->
 				<section id="five" class="wrapper style2 special fade">
 					<div class="container">
 						<header>
 							<h2>Contact Us</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
+							<p>Contact us now for more information!</p>
+						</header><!--
 						<form method="post" action="#" class="container 50%">
 							<div class="row uniform 50%">
 								<div class="8u 12u$(xsmall)"><input type="email" required="required" name="email" id="email" placeholder="Your Email Address" /></div>
@@ -207,7 +234,27 @@
 
 								<div class="4u$ 12u$(xsmall)"><input type="submit" value="Submit" class="fit special" /></div>
 							</div>
-						</form>
+						</form>-->
+						<form method="post" action="#">
+									<div class="row uniform 50%">
+										<div class="6u 12u$(xsmall)">
+											<input type="text" name="name" id="name" value="" placeholder="Name" />
+										</div>
+										<div class="6u$ 12u$(xsmall)">
+											<input type="email" name="email" id="email" value="" placeholder="Email" />
+										</div>
+
+										<div class="12u$">
+											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<div class="12u$">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="special" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
 					</div>
 				</section>
 
@@ -222,7 +269,7 @@
 						<li><a href="#" target="_blank" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Interior Design. All rights reserved.</li><!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+                        <li>&copy; Interior Design.</br></br>Developed by <a href="http://timothylampersonal.azurewebsites.net" target="_blank" >Timothy Lam.</a> Design: HTML5 UP</li><!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
 					</ul>
 				</footer>
 
@@ -238,5 +285,13 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+    <script type="text/javascript">
+                $('.content1').slick({draggable: false
+                                     ,dots: true});
+            </script>
 	</body>
 </html>
