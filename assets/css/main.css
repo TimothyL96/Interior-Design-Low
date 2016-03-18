@@ -3345,8 +3345,8 @@
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-                        /*header color*/
-						color: #0000FF;
+                        /*header color e44c65*/
+						color: #e44c65;
 					}
 
 					#header nav ul li > ul {
@@ -4036,5 +4036,15 @@
 	}
 
 #header {
-    visibility: hidden;
+    opacity: 0;
+}
+
+#header:hover {
+    opacity: 1;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+     transition: all 0.4s ease-in-out;
 }
