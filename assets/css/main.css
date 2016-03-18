@@ -4048,3 +4048,18 @@
     transition: all .8s ease;
      transition: all 0.4s ease-in-out;
 }
+
+#header:hover + #infoi {
+    opacity: 0;
+}
+
+#infoi {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    float: left;
+  top: 25;
+  left: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
