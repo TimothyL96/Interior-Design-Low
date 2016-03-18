@@ -3345,7 +3345,8 @@
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #e44c65;
+                        /*header color*/
+						color: #0000FF;
 					}
 
 					#header nav ul li > ul {
@@ -4033,3 +4034,7 @@
 					}
 
 	}
+
+#header {
+    visibility: hidden;
+}
