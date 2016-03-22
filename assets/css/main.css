@@ -4095,6 +4095,8 @@ body.landing #header {
 }
 
 #align {
-    display: inline;
+    display: inline-block;
     float: right;
+    overflow: hidden;
+    white-space: nowrap;
 }
