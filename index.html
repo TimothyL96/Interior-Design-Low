@@ -26,7 +26,7 @@
 -->
 <html>
 	<head>
-		<title>Design</title>
+		<title>Interior Design</title>
         <link rel="icon" type="image/vnd.microsoft.icon" href="assets/css/images/myicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,7 +53,7 @@
 									<li><a href="right-sidebar.html">Two</a></li>
 									<li><a href="no-sidebar.html">Different Places</a></li>
 									<li>
-										<a href="#">More<p id="align">&#9660</p></a>
+                                        <a id="alignarrow" href="#">More</a>
 										<ul>
 											<li><a href="#">Living Room</a></li>
 											<li><a href="#">Bedroom</a></li>
@@ -69,7 +69,7 @@
 					</nav>
 				</header>
 				<div id="infoi">
-                    <img src="./assets/css/images/angle-double-up.png" height="30" width="32" />
+                    <img src="./assets/css/images/angle-double-up.png" height="26" width="28" />
                   </div>
 
 			<!-- Banner -->
@@ -83,7 +83,8 @@
                             <p>And there are no hoverboards or flying cars.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
-                        <span class="image"><img src="images/banner.jpg" alt="" width="100px" height="100px"/></span>
+                        <!--//Image 316x316-->
+                        <span class="image"><img src="images/banner.jpg" alt="" /></span>
                     </div>
                     <div class="con2" id="banner1">
                        <header>
@@ -91,7 +92,7 @@
                             <p>weeehaaa.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
-                        <span class="image"><img src="images/banner1.jpg" alt="" width="100px" height="100px"/></span>
+                        <span class="image"><img src="images/banner1.jpg" alt="" /></span>
                     </div>
                     <div class="con3">
                        <header>
@@ -99,7 +100,7 @@
                             <p>wooohoooo.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
-                       <span class="image"><img src="images/pic011.jpg" alt="" width="100px" height="100px"/></span>
+                       <span class="image"><img src="images/pic01.jpg" alt="" /></span>
                     </div>
                 </div>
                 <a href="#one" class="goto-next scrolly">Next</a>
@@ -277,6 +278,24 @@
 
 		</div>
 
+		<div class="hidden">
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+
+                    if (document.images) {
+                        img1 = new Image();
+                        img2 = new Image();
+                        img3 = new Image();
+
+                        img1.src = "images/banner.jpg";
+                        img2.src = "images/banner1.jpg";
+                        img3.src = "images/pic01.jpg";
+                    }
+
+                //--><!]]>
+            </script>
+        </div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -288,12 +307,51 @@
 			<script src="assets/js/main.js"></script>
 
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-    <script type="text/javascript">
-                $('.content1').slick({draggable: false
-                                     ,dots: true, autoplay: true});
-            </script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+            <!--<script src="jquery.scrollex.min.js"></script>-->
+            <script type="text/javascript">
+
+                //detect class change
+        //Reduce load time, preload
+        //autoplay changes
+
+            $('.content1').slick({draggable: false
+                                 ,dots: true, autoplay: true});
+
+            $('.slick-arrow,.slick-dots button').click(function(){
+                if ( $('.slick-current').hasClass("con1") )
+                {
+                    $('#banner').css("background-image","url(images/banner.jpg)");
+                }
+                if ( $('.slick-current').hasClass("con2") )
+                {
+                    $('#banner').css("background-image","url(images/banner1.jpg)");
+                }if ( $('.slick-current').hasClass("con3") )
+                {
+                    $('#banner').css("background-image","url(images/pic01.jpg)");
+                }
+                $('#banner').fadeIn(1000);
+                //aria-discribedby=slick-slide00
+            });
+
+            window.setInterval(function(){
+                /// call your function here
+                if ( $('.slick-current').hasClass("con1") )
+                {
+                    $('#banner').css("background-image","url(images/banner.jpg)");
+                }
+                if ( $('.slick-current').hasClass("con2") )
+                {
+                    $('#banner').css("background-image","url(images/banner1.jpg)");
+                }if ( $('.slick-current').hasClass("con3") )
+                {
+                    $('#banner').css("background-image","url(images/pic01.jpg)");
+                }
+                $('#banner').fadeIn(500);
+                //aria-discribedby=slick-slide00
+            }, 1000);
+        </script>
 	</body>
 </html>

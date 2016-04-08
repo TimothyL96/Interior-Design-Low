@@ -80,8 +80,6 @@
             user-select: none;
     }*/
 
-    #banner1 ~#abc{
-        background-image: url("../../images/banner1.jpg");
     }
 
 	body {
@@ -3422,6 +3420,15 @@
 		position: relative;
 		text-align: center;
 		z-index: 21;
+
+
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+     transition: all 0.8s ease-in-out;
+        transition-delay: 0.3s;
 	}
 
 		#banner:before {
@@ -4130,9 +4137,8 @@ body.landing #header {
     position: fixed;
 }
 
-#align {
-    display: inline-block;
-    float: right;
-    overflow: hidden;
-    white-space: nowrap;
-}
+#alignarrow:after {
+       color: rgba(255, 255, 255, 0.75);
+       content: '▾';
+       float: right;
+    }
