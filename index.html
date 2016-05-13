@@ -369,6 +369,60 @@
                 return false;
             });
 
+            var current = "banner";
+            $(function() {
+                $(window).on('wheel', function(e) {
+                    var delta = e.originalEvent.deltaY;
+
+                    if (delta > 0)
+                        {
+                            switch (current)
+                                {
+                                    case "banner":
+                                        current = "one";
+                                        break;
+                                    case "one":
+                                        current = "two";
+                                        break;
+                                    case "two":
+                                        current = "three";
+                                        break;
+                                    case "three":
+                                        current = "five";
+                                        break;
+                                    default:
+                                        //asd
+                                }
+                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                            //alert(current);
+                        }
+                    else
+                        {
+                            switch (current)
+                                    {
+                                        case "five":
+                                            current = "three";
+                                            break;
+                                        case "three":
+                                            current = "two";
+                                            break;
+                                        case "two":
+                                            current = "one";
+                                            break;
+                                        case "one":
+                                            current = "banner";
+                                            break;
+                                        default:
+                                            //asd
+                                    }
+                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                        }
+                    delta = null;
+                    //return false; // this line is only added so the whole page won't scroll in the demo
+                });
+            });
+
+
         </script>
 	</body>
 </html>
