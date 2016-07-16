@@ -47,10 +47,10 @@
 						<ul>
 							<li><a href="#banner">Home</a></li>
 							<li>
-								<a href="#">Layouts</a>
+								<a href="#" id="layouts">Layouts</a>
 								<ul>
-									<li><a href="left-sidebar.html">One</a></li>
-									<li><a href="right-sidebar.html">Two</a></li>
+									<li><a href="left-sidebar.html">Commercial</a></li>
+									<li><a href="right-sidebar.html">Residential</a></li>
 									<li><a href="no-sidebar.html">Different Places</a></li>
 									<li>
                                         <a id="alignarrow" href="#">More</a>
@@ -63,7 +63,7 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="elements.html">Pricing</a></li>
+							<!--<li><a href="elements.html">Pricing</a></li>-->
 							<li><a href="#five" class="button special">Contact Us</a></li>
 						</ul>
 					</nav>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="con2" id="banner1">
                        <header>
-                            <h2>Slide one!!!!!</h2>
+                            <h2>Slide !!!!!</h2>
                             <p>weeehaaa.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="con3">
                        <header>
-                            <h2>Slide !!!!! two</h2>
+                            <h2>Slide two</h2>
                             <p>wooohoooo.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
@@ -116,7 +116,7 @@
 							<div class="row">
 								<div class="4u 12u$(medium)">
 									<header>
-										<h2>Despite the jaws of the whole recipe</h2>
+										<h2>Biography</h2>
 										<p>This is Interior Design</p>
 									</header>
 								</div>
@@ -145,7 +145,7 @@
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2>Interdum amet non magna accumsan</h2>
+							<h2>Commercial</h2>
 							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
 						</header>
 						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
@@ -161,7 +161,7 @@
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2>Interdum felis blandit praesent sed augue</h2>
+							<h2>Residential</h2>
 							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
 						</header>
 						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
@@ -373,13 +373,14 @@
             $(function() {
                 $(window).on('wheel', function(e) {
                     var delta = e.originalEvent.deltaY;
-
+                    $('body').addClass('stop-scrolling');
                     if (delta > 0)
                         {
                             switch (current)
                                 {
                                     case "banner":
                                         current = "one";
+                                        $('.content1').slick({autoplay: false});
                                         break;
                                     case "one":
                                         current = "two";
@@ -389,6 +390,8 @@
                                         break;
                                     case "three":
                                         current = "five";
+                                        break;
+                                    case "five":
                                         break;
                                     default:
                                         //asd
@@ -411,6 +414,9 @@
                                             break;
                                         case "one":
                                             current = "banner";
+                                            $('.content1').slick({autoplay: true});
+                                            break;
+                                        case "banner":
                                             break;
                                         default:
                                             //asd
@@ -418,10 +424,66 @@
                             $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
                         }
                     delta = null;
+                    $('body').removeClass('stop-scrolling');
                     //return false; // this line is only added so the whole page won't scroll in the demo
                 });
             });
 
+            $('#header').hover(
+                function()
+                {
+                    $('#header').addClass('dropotronheader');
+                   /* $('#header').css('opacity', '1','important');
+                    $('#header').css('-webkit-transition', 'all .8s ease','important');
+                    $('#header').css('-moz-transition', 'all .8s ease','important');
+                    $('#header').css('-ms-transition', 'all .8s ease','important');
+                    $('#header').css('-o-transition', 'all .8s ease','important');
+                    $('#header').css('transition', 'all .8s ease','important');
+                    $('#header').css(' transition', 'all 0.4s ease-in-out','important');
+                    $('#header').css('opacity', '40%','important');*/
+                },
+                function()
+                {
+                    var inside = 'false';
+                    //Mouse leave dropotron
+                    $('ul.dropotron.level-0.right').on('mouseleave', function()
+                    {
+                        setTimeout
+                        (
+                            function()
+                            {
+                                //do something special
+                                if( ($('ul.dropotron.level-0.right').css('display') === 'none') && ($('#header:hover').length == 0) )
+                                {
+                                    $('#header').removeClass("dropotronheader");
+                                }
+                            }, 800
+                        );
+                    });
+
+                    //Mouse enter dropotron
+                    $('ul.dropotron.level-0.right').on('mouseenter', function()
+                    {
+                        //$('#header').addClass("dropotronheader");
+                    });
+
+                    //Mouse leave hover without dropotron
+                    if ($('#header:hover').length == 0 && $('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+                    {
+                        setTimeout
+                        (
+                            function()
+                            {
+                                //do something special
+                                if( $('#header:hover').length == 0)
+                                {
+                                    $('#header').removeClass("dropotronheader");
+                                }
+                            }, 300
+                        );
+                    }
+                }
+            );
 
         </script>
 	</body>

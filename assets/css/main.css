@@ -4118,8 +4118,8 @@ body.landing #header {
     background: rgba(140, 136, 140, 0.25);
    /* background: #8c888c;*/
 }
-
-#header:hover {
+/*
+#header:hover{
     opacity: 1;
     -webkit-transition: all .8s ease;
     -moz-transition: all .8s ease;
@@ -4128,6 +4128,18 @@ body.landing #header {
     transition: all .8s ease;
      transition: all 0.4s ease-in-out;
     opacity: 40%;
+}*/
+
+/*Dropdowwn hover show*/
+.dropotronheader{
+    opacity: 1 !important;
+    -webkit-transition: all .8s ease !important;
+    -moz-transition: all .8s ease !important;
+    -ms-transition: all .8s ease !important;
+    -o-transition: all .8s ease !important;
+    transition: all .8s ease !important;
+     transition: all 0.4s ease-in-out !important;
+    opacity: 40% !important;
 }
 
 #header:hover + #infoi {
@@ -4154,3 +4166,8 @@ body.landing #header {
        content: '▾';
        float: right;
     }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
