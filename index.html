@@ -433,6 +433,7 @@
                 function()
                 {
                     $('#header').addClass('dropotronheader');
+                    $('#infoi').addClass('infoiopa');
                    /* $('#header').css('opacity', '1','important');
                     $('#header').css('-webkit-transition', 'all .8s ease','important');
                     $('#header').css('-moz-transition', 'all .8s ease','important');
@@ -456,6 +457,13 @@
                                 if( ($('ul.dropotron.level-0.right').css('display') === 'none') && ($('#header:hover').length == 0) )
                                 {
                                     $('#header').removeClass("dropotronheader");
+                                    setTimeout
+                                    (
+                                        function()
+                                        {
+                                            $('#infoi').removeClass('infoiopa');
+                                        }, 100
+                                    );
                                 }
                             }, 800
                         );
@@ -478,6 +486,13 @@
                                 if( $('#header:hover').length == 0)
                                 {
                                     $('#header').removeClass("dropotronheader");
+                                    setTimeout
+                                    (
+                                        function()
+                                        {
+                                            $('#infoi').removeClass('infoiopa');
+                                        }, 100
+                                    );
                                 }
                             }, 300
                         );
