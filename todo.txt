@@ -1,0 +1,4 @@
+Slick second slide transition
+Dropdown hyperlink to learn more
+learn more hyperlink to album
+fix lag

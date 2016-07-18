@@ -45,20 +45,19 @@
 					<h1 id="logo"><a href="#banner">Design!</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="#banner">Home</a></li>
+							<li><a href="#one">Biography</a></li>
 							<li>
 								<a href="#" id="layouts">Layouts</a>
 								<ul>
-									<li><a href="left-sidebar.html">Commercial</a></li>
-									<li><a href="right-sidebar.html">Residential</a></li>
+									<li><a href="#two">Commercial</a></li>
+									<li><a href="#three">Residential</a></li>
 									<li><a href="no-sidebar.html">Different Places</a></li>
 									<li>
                                         <a id="alignarrow" href="#">More</a>
 										<ul>
 											<li><a href="#">Living Room</a></li>
 											<li><a href="#">Bedroom</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
+											<li><a href="#">Garden</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -362,6 +361,27 @@
                 return false;
             });
 
+            $('a[href*=#four]').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1000);
+                return false;
+            });
+
+            $('a[href*=#three]').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1000);
+                return false;
+            });
+
+            $('a[href*=#two]').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1000);
+                return false;
+            });
+
             $('a[href*=#banner]').click(function(){
                 $('html, body').animate({
                     scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -445,7 +465,6 @@
                 },
                 function()
                 {
-                    var inside = 'false';
                     //Mouse leave dropotron
                     $('ul.dropotron.level-0.right').on('mouseleave', function()
                     {
