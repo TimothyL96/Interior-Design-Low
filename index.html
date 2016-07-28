@@ -24,7 +24,7 @@
 		    Respond.js (j.mp/respondjs)
 		    Skel (skel.io)
 -->
-<html>
+<html lang="en">
 	<head>
 		<title>Interior Design</title>
         <link rel="icon" type="image/vnd.microsoft.icon" href="assets/css/images/myicon.ico">
@@ -68,12 +68,11 @@
 					</nav>
 				</header>
 				<div id="infoi">
-                    <img src="./assets/css/images/angle-double-up.png" height="26" width="28" />
+                    <img src="./assets/css/images/angle-double-up.png" alt="arrow up" height="26" width="28" />
                   </div>
 
+
 			<!-- Banner -->
-
-
             <section id="banner">
                 <div class="content1">
                     <div class="con1">
@@ -85,7 +84,7 @@
                         <!--//Image 316x316-->
                        <!-- <span class="image"><img src="images/banner.jpg" alt="" /></span>-->
                     </div>
-                    <div class="con2" id="banner1">
+                    <div class="con2">
                        <header>
                             <h2>Slide !!!!!</h2>
                             <p>weeehaaa.<br />
@@ -106,7 +105,6 @@
            </section>
 
 
-
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
@@ -120,7 +118,7 @@
 									</header>
 								</div>
 								<div class="4u 12u$(medium)">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
+									<p>This is me.
 									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
 									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
 									augue varius tempus lobortis porttitor accumsan consequat
@@ -139,13 +137,14 @@
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
 
+
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Commercial</h2>
-							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+							<p>Commercial</p>
 						</header>
 						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
 						<ul class="actions">
@@ -155,13 +154,14 @@
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
 
+
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Residential</h2>
-							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+							<p>Residential</p>
 						</header>
 						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
 						<ul class="actions">
@@ -171,6 +171,7 @@
 					<a href="#five" class="goto-next scrolly">Next</a>
 				<!--	<i class="fa fa-envelope fa-5x" style="position:relative;color:grey;">-->
 				</section>
+
 
 			<!-- Four --><!--
 				<section id="four" class="wrapper style1 special fade-up">
@@ -221,6 +222,7 @@
 					</div>
 				</section>-->
 
+
 			<!-- Five -->
 				<section id="five" class="wrapper style2 special fade">
 					<div class="container">
@@ -260,6 +262,7 @@
 					</div>
 				</section>
 
+
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
@@ -267,17 +270,16 @@
 						<li><a href="https://fb.me/timothy0707" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="https://linkedin.com/in/timothy0707" target="_blank" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://instagram.com/ttimt" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" target="_blank" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://github.com/ttimt" target="_blank" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
 						<li><a href="#" target="_blank" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
                         <li>&copy; Interior Design.</br></br>Developed by <a href="http://timothylampersonal.azurewebsites.net" target="_blank" >interiordesignlow.</a> Design: HTML5 UP</li><!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
 					</ul>
 				</footer>
-
 		</div>
 
-		<div class="hidden">
+		<div>
             <script type="text/javascript">
                 <!--//--><![CDATA[//><!--
 
@@ -288,7 +290,7 @@
 
                      //  <!-- img1.src = "images/banner.jpg";-->
                         img1.src = "images/ElysiumLayout_12.jpg";
-                        img2.src = "images/banner1.jpg";
+                        img2.src = "images/12.jpg";
                         img3.src = "images/five.jpeg";
                     }
 
@@ -313,29 +315,49 @@
             <!--<script src="jquery.scrollex.min.js"></script>-->
             <script type="text/javascript">
 
-                //detect class change
-        //Reduce load time, preload
-        //autoplay changes
-
             $('.content1').slick({draggable: false
-                                 ,dots: true, autoplay: true});
+                                 ,dots: true, autoplay: true, pauseOnDotsHover: true, fade: true, autoplaySpeed: 4000});
 
-            $('.slick-arrow,.slick-dots button').click(function(){
-                if ( $('.slick-current').hasClass("con1") )
+            $('.slick-dots').on('.slick-active', function()
+            {
+                console.log('outside');
+                if ( $('.slick-active').hasClass("con1") )
                 {
-                    $('#banner').css("background-image","url(images/banner.jpg)");
+                    console.log('hi1');
+                    $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
                 }
-                if ( $('.slick-current').hasClass("con2") )
+                if ( $('.slick-active').hasClass("con2") )
                 {
                     $('#banner').css("background-image","url(images/12.jpg)");
-                }if ( $('.slick-current').hasClass("con3") )
+                    console.log('hi2');
+                }if ( $('.slick-active').hasClass("con3") )
                 {
                     $('#banner').css("background-image","url(images/five.jpeg)");
+                    console.log('hi3');
+                }
+                $('#banner').fadeIn(1000);
+            });/*
+            $('.slick-arrow, .slick-dots button').on("click", function()
+            {
+                if ( $('.slick-active').hasClass("con1") )
+                {
+                    console.log('hi1');
+                    $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
+                }
+                if ( $('.slick-active').hasClass("con2") )
+                {
+                    $('#banner').css("background-image","url(images/12.jpg)");
+                    console.log('hi2');
+                }if ( $('.slick-active').hasClass("con3") )
+                {
+                    $('#banner').css("background-image","url(images/five.jpeg)");
+                    console.log('hi3');
                 }
                 $('#banner').fadeIn(1000);
                 //aria-discribedby=slick-slide00
-            });
+            });*/
 
+                /*
             window.setInterval(function(){
                 /// call your function here
                 if ( $('.slick-current').hasClass("con1") )
@@ -352,7 +374,7 @@
                 }
                 $('#banner').fadeIn(1000);
                 //aria-discribedby=slick-slide00
-            }, 500);
+            }, 500);*/
 
             $('a[href*=#five]').click(function(){
                 $('html, body').animate({
@@ -382,6 +404,13 @@
                 return false;
             });
 
+            $('a[href*=#one]').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1000);
+                return false;
+            });
+
             $('a[href*=#banner]').click(function(){
                 $('html, body').animate({
                     scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -391,58 +420,59 @@
 
             var current = "banner";
             $(function() {
-                $(window).on('wheel', function(e) {
+                $(window).on('scroll', function(e) {
+                //$(window).on('wheel', function(e) {
                     var delta = e.originalEvent.deltaY;
                     $('body').addClass('stop-scrolling');
                     if (delta > 0)
+                    {
+                      /*  switch (current)
                         {
-                            switch (current)
-                                {
-                                    case "banner":
-                                        current = "one";
-                                        $('.content1').slick({autoplay: false});
-                                        break;
-                                    case "one":
-                                        current = "two";
-                                        break;
-                                    case "two":
-                                        current = "three";
-                                        break;
-                                    case "three":
-                                        current = "five";
-                                        break;
-                                    case "five":
-                                        break;
-                                    default:
-                                        //asd
-                                }
-                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
-                            //alert(current);
-                        }
+                            case "banner":
+                                current = "one";
+                                $('.content1').slick({autoplay: false});
+                                break;
+                            case "one":
+                                current = "two";
+                                break;
+                            case "two":
+                                current = "three";
+                                break;
+                            case "three":
+                                current = "five";
+                                break;
+                            case "five":
+                                break;
+                            default:
+                                //asd
+                        }*/
+                        $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                        //alert(current);
+                    }
                     else
+                    {
+                       /* switch (current)
                         {
-                            switch (current)
-                                    {
-                                        case "five":
-                                            current = "three";
-                                            break;
-                                        case "three":
-                                            current = "two";
-                                            break;
-                                        case "two":
-                                            current = "one";
-                                            break;
-                                        case "one":
-                                            current = "banner";
-                                            $('.content1').slick({autoplay: true});
-                                            break;
-                                        case "banner":
-                                            break;
-                                        default:
-                                            //asd
-                                    }
-                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
-                        }
+                            case "five":
+                                current = "three";
+                                break;
+                            case "three":
+                                current = "two";
+                                break;
+                            case "two":
+                                current = "one";
+                                break;
+                            case "one":
+                                current = "banner";
+                                $('.content1').slick({autoplay: true});
+                                break;
+                            case "banner":
+                                break;
+                            default:
+                                //asd
+                        }*/
+                        $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                    }
                     delta = null;
                     $('body').removeClass('stop-scrolling');
                     //return false; // this line is only added so the whole page won't scroll in the demo

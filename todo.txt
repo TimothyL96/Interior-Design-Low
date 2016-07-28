@@ -1,4 +1,4 @@
-Slick second slide transition
+Slick second slide transition scrolling
 Dropdown hyperlink to learn more
 learn more hyperlink to album
 fix lag
