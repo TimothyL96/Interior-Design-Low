@@ -317,236 +317,237 @@
             <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
             <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
             <!--<script src="jquery.scrollex.min.js"></script>-->
-            <script type="text/javascript">
 
-            <!-- Latest compiled and minified JavaScript -->
+
+            <!--Latest compiled and minified JavaScript-->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-            $('.content1').slick({draggable: false
-                                 ,dots: true, autoplay: true, pauseOnDotsHover: true, fade: true, autoplaySpeed: 4000});
-                /*
-            $('.slick-dots').on('.slick-active', function()
-            {
-                console.log('outside');
-                if ( $('.slick-active').hasClass("con1") )
+            <script type="text/javascript">
+                $('.content1').slick({draggable: false
+                                     ,dots: true, autoplay: true, pauseOnDotsHover: true, fade: true, autoplaySpeed: 4000});
+                    /*
+                $('.slick-dots').on('.slick-active', function()
                 {
-                    console.log('hi1');
-                    $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
-                }
-                if ( $('.slick-active').hasClass("con2") )
-                {
-                    $('#banner').css("background-image","url(images/12.jpg)");
-                    console.log('hi2');
-                }if ( $('.slick-active').hasClass("con3") )
-                {
-                    $('#banner').css("background-image","url(images/five.jpeg)");
-                    console.log('hi3');
-                }
-                $('#banner').fadeIn(700);
-            });*/
-            $('.slick-arrow, .slick-dots button').on("click", function()
-            {
-                if ( $('.slick-active').hasClass("con1") )
-                {
-                    console.log('hi1');
-                    $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
-                }
-                if ( $('.slick-active').hasClass("con2") )
-                {
-                    $('#banner').css("background-image","url(images/12.jpg)");
-                    console.log('hi2');
-                }if ( $('.slick-active').hasClass("con3") )
-                {
-                    $('#banner').css("background-image","url(images/five.jpeg)");
-                    console.log('hi3');
-                }
-                $('#banner').fadeIn(700);
-                //aria-discribedby=slick-slide00
-            });
-
-                ///*can cause lag
-            window.setInterval(function(){
-                /// call your function here
-                if ( $('.slick-current').hasClass("con1") )
-                {
-                   // $('#banner').css("background-image","url(images/banner.jpg)");
-                    $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
-                }
-                if ( $('.slick-current').hasClass("con2") )
-                {
-                    $('#banner').css("background-image","url(images/12.jpg)");
-                }if ( $('.slick-current').hasClass("con3") )
-                {
-                    $('#banner').css("background-image","url(images/five.jpeg)");
-                }
-                $('#banner').fadeIn(1000);
-                //aria-discribedby=slick-slide00
-            }, 400);//*/
-
-            $('a[href*=#five]').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1000);
-                return false;
-            });
-
-            $('a[href*=#four]').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1000);
-                return false;
-            });
-
-            $('a[href*=#three]').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1000);
-                return false;
-            });
-
-            $('a[href*=#two]').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1000);
-                return false;
-            });
-
-            $('a[href*=#one]').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1000);
-                return false;
-            });
-
-            $('a[href*=#banner]').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1000);
-                return false;
-            });
-
-           /* var current = "banner";
-            $(function() {
-                $(window).on('scroll', function(e) {
-                //$(window).on('wheel', function(e) {
-                    var delta = e.originalEvent.deltaY;
-                    $('body').addClass('stop-scrolling');
-                    if (delta > 0)
+                    console.log('outside');
+                    if ( $('.slick-active').hasClass("con1") )
                     {
-                        switch (current)
-                        {
-                            case "banner":
-                                current = "one";
-                                $('.content1').slick({autoplay: false});
-                                break;
-                            case "one":
-                                current = "two";
-                                break;
-                            case "two":
-                                current = "three";
-                                break;
-                            case "three":
-                                current = "five";
-                                break;
-                            case "five":
-                                break;
-                            default:
-                                //asd
-                        }
-                        $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
-                        //alert(current);
+                        console.log('hi1');
+                        $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
                     }
-                    else
+                    if ( $('.slick-active').hasClass("con2") )
                     {
-                        switch (current)
-                        {
-                            case "five":
-                                current = "three";
-                                break;
-                            case "three":
-                                current = "two";
-                                break;
-                            case "two":
-                                current = "one";
-                                break;
-                            case "one":
-                                current = "banner";
-                                $('.content1').slick({autoplay: true});
-                                break;
-                            case "banner":
-                                break;
-                            default:
-                                //asd
-                        }
-                        $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                        $('#banner').css("background-image","url(images/12.jpg)");
+                        console.log('hi2');
+                    }if ( $('.slick-active').hasClass("con3") )
+                    {
+                        $('#banner').css("background-image","url(images/five.jpeg)");
+                        console.log('hi3');
                     }
-                    delta = null;
-                    $('body').removeClass('stop-scrolling');
-                    //return false; // this line is only added so the whole page won't scroll in the demo
+                    $('#banner').fadeIn(700);
+                });*/
+                $('.slick-arrow, .slick-dots button').on("click", function()
+                {
+                    if ( $('.slick-active').hasClass("con1") )
+                    {
+                        console.log('hi1');
+                        $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
+                    }
+                    if ( $('.slick-active').hasClass("con2") )
+                    {
+                        $('#banner').css("background-image","url(images/12.jpg)");
+                        console.log('hi2');
+                    }if ( $('.slick-active').hasClass("con3") )
+                    {
+                        $('#banner').css("background-image","url(images/five.jpeg)");
+                        console.log('hi3');
+                    }
+                    $('#banner').fadeIn(700);
+                    //aria-discribedby=slick-slide00
                 });
-            });*/
 
-            $('#header').hover(
-                function()
-                {
-                    $('#header').addClass('dropotronheader');
-                    $('#infoi').addClass('infoiopa');
-                },
-                function()
-                {
-                    //Mouse leave dropotron
-                    $('ul.dropotron.level-0.right').on('mouseleave', function()
+                    ///*can cause lag
+                window.setInterval(function(){
+                    /// call your function here
+                    if ( $('.slick-current').hasClass("con1") )
                     {
-                        setTimeout
-                        (
-                            function()
-                            {
-                                //do something special
-                                if( ($('ul.dropotron.level-0.right').css('display') === 'none') && ($('#header:hover').length == 0) )
-                                {
-                                    $('#header').removeClass("dropotronheader");
-                                    setTimeout
-                                    (
-                                        function()
-                                        {
-                                            $('#infoi').removeClass('infoiopa');
-                                        }, 100
-                                    );
-                                }
-                            }, 800
-                        );
-                    });
-
-                    //Mouse enter dropotron
-                    $('ul.dropotron.level-0.right').on('mouseenter', function()
-                    {
-                        //$('#header').addClass("dropotronheader");
-                    });
-
-                    //Mouse leave hover without dropotron
-                    if ($('#header:hover').length == 0 && $('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
-                    {
-                        setTimeout
-                        (
-                            function()
-                            {
-                                //do something special
-                                if( $('#header:hover').length == 0)
-                                {
-                                    $('#header').removeClass("dropotronheader");
-                                    setTimeout
-                                    (
-                                        function()
-                                        {
-                                            $('#infoi').removeClass('infoiopa');
-                                        }, 100
-                                    );
-                                }
-                            }, 300
-                        );
+                       // $('#banner').css("background-image","url(images/banner.jpg)");
+                        $('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
                     }
-                }
-            );
+                    if ( $('.slick-current').hasClass("con2") )
+                    {
+                        $('#banner').css("background-image","url(images/12.jpg)");
+                    }if ( $('.slick-current').hasClass("con3") )
+                    {
+                        $('#banner').css("background-image","url(images/five.jpeg)");
+                    }
+                    $('#banner').fadeIn(1000);
+                    //aria-discribedby=slick-slide00
+                }, 400);//*/
+
+                $('a[href*=#five]').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+                    return false;
+                });
+
+                $('a[href*=#four]').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+                    return false;
+                });
+
+                $('a[href*=#three]').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+                    return false;
+                });
+
+                $('a[href*=#two]').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+                    return false;
+                });
+
+                $('a[href*=#one]').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+                    return false;
+                });
+
+                $('a[href*=#banner]').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+                    return false;
+                });
+
+               /* var current = "banner";
+                $(function() {
+                    $(window).on('scroll', function(e) {
+                    //$(window).on('wheel', function(e) {
+                        var delta = e.originalEvent.deltaY;
+                        $('body').addClass('stop-scrolling');
+                        if (delta > 0)
+                        {
+                            switch (current)
+                            {
+                                case "banner":
+                                    current = "one";
+                                    $('.content1').slick({autoplay: false});
+                                    break;
+                                case "one":
+                                    current = "two";
+                                    break;
+                                case "two":
+                                    current = "three";
+                                    break;
+                                case "three":
+                                    current = "five";
+                                    break;
+                                case "five":
+                                    break;
+                                default:
+                                    //asd
+                            }
+                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                            //alert(current);
+                        }
+                        else
+                        {
+                            switch (current)
+                            {
+                                case "five":
+                                    current = "three";
+                                    break;
+                                case "three":
+                                    current = "two";
+                                    break;
+                                case "two":
+                                    current = "one";
+                                    break;
+                                case "one":
+                                    current = "banner";
+                                    $('.content1').slick({autoplay: true});
+                                    break;
+                                case "banner":
+                                    break;
+                                default:
+                                    //asd
+                            }
+                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
+                        }
+                        delta = null;
+                        $('body').removeClass('stop-scrolling');
+                        //return false; // this line is only added so the whole page won't scroll in the demo
+                    });
+                });*/
+
+                $('#header').hover(
+                    function()
+                    {
+                        $('#header').addClass('dropotronheader');
+                        $('#infoi').addClass('infoiopa');
+                    },
+                    function()
+                    {
+                        //Mouse leave dropotron
+                        $('ul.dropotron.level-0.right').on('mouseleave', function()
+                        {
+                            setTimeout
+                            (
+                                function()
+                                {
+                                    //do something special
+                                    if( ($('ul.dropotron.level-0.right').css('display') === 'none') && ($('#header:hover').length == 0) )
+                                    {
+                                        $('#header').removeClass("dropotronheader");
+                                        setTimeout
+                                        (
+                                            function()
+                                            {
+                                                $('#infoi').removeClass('infoiopa');
+                                            }, 100
+                                        );
+                                    }
+                                }, 800
+                            );
+                        });
+
+                        //Mouse enter dropotron
+                        $('ul.dropotron.level-0.right').on('mouseenter', function()
+                        {
+                            //$('#header').addClass("dropotronheader");
+                        });
+
+                        //Mouse leave hover without dropotron
+                        if ($('#header:hover').length == 0 && $('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+                        {
+                            setTimeout
+                            (
+                                function()
+                                {
+                                    //do something special
+                                    if( $('#header:hover').length == 0)
+                                    {
+                                        $('#header').removeClass("dropotronheader");
+                                        setTimeout
+                                        (
+                                            function()
+                                            {
+                                                $('#infoi').removeClass('infoiopa');
+                                            }, 100
+                                        );
+                                    }
+                                }, 300
+                            );
+                        }
+                    }
+                );
 
         </script>
 	</body>
