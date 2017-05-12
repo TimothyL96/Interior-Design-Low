@@ -57,7 +57,7 @@
 									<li><a href="#three">Residential</a></li>
 									<li><a href="no-sidebar.html">Different Places</a></li>
 									<li>
-                                        <a id="alignarrow" href="#">More</a>
+                                        <a id="alignarrow" href="#">More <div style="float: right;">&#8595;</div></a>
 										<ul>
 											<li><a href="#">Living Room</a></li>
 											<li><a href="#">Bedroom</a></li>
@@ -76,7 +76,7 @@
                   </div>
 
 
-			<!-- Banner --><!--
+			<!-- Banner -->
             <section id="banner">
                 <div class="content1">
                     <div class="con1">
@@ -86,8 +86,8 @@
                             Just creative design. Lots of new design.</p>
                         </header>
                         <!--//Image 316x316-->
-                       <!-- <span class="image"><img src="images/banner.jpg" alt="" /></span>-->
-            <!--
+                        <span class="image"><img src="images/banner.jpg" alt="" /></span>
+
                     </div>
                     <div class="con2">
                        <header>
@@ -95,31 +95,32 @@
                             <p>weeehaaa.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
-                       <!--// <span class="image"><img src="images/banner1.jpg" alt="" /></span>-->
-            <!--        </div>
+                        <span class="image"><img src="images/banner1.jpg" alt="" /></span>
+                    </div>
                     <div class="con3">
                        <header>
                             <h2>Slide two</h2>
                             <p>wooohoooo.<br />
                             Just creative design. Lots of new design.</p>
                         </header>
-                       <!--<span class="image"><img src="images/pic01.jpg" alt="" /></span>-->
-            <!--             </div>
+                       <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+                         </div>
                 </div>
                 <a href="#one" class="goto-next scrolly">Next</a>
-           </section>-->
+           </section>
+		   <!--
             <section id="banner">
                 <div class="content1"/>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
-                <ol class="carousel-indicators">
+               <!-- <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+               <!-- <div class="carousel-inner" role="listbox">
 
                     <div class="item active">
                         <img src="images/ElysiumLayout_12.jpg" alt=".">
@@ -150,7 +151,7 @@
                                 </p>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
 
                 <!-- Controls -->
@@ -485,73 +486,14 @@
                     return false;
                 });
 
-               /* var current = "banner";
-                $(function() {
-                    $(window).on('scroll', function(e) {
-                    //$(window).on('wheel', function(e) {
-                        var delta = e.originalEvent.deltaY;
-                        $('body').addClass('stop-scrolling');
-                        if (delta > 0)
-                        {
-                            switch (current)
-                            {
-                                case "banner":
-                                    current = "one";
-                                    $('.content1').slick({autoplay: false});
-                                    break;
-                                case "one":
-                                    current = "two";
-                                    break;
-                                case "two":
-                                    current = "three";
-                                    break;
-                                case "three":
-                                    current = "five";
-                                    break;
-                                case "five":
-                                    break;
-                                default:
-                                    //asd
-                            }
-                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
-                            //alert(current);
-                        }
-                        else
-                        {
-                            switch (current)
-                            {
-                                case "five":
-                                    current = "three";
-                                    break;
-                                case "three":
-                                    current = "two";
-                                    break;
-                                case "two":
-                                    current = "one";
-                                    break;
-                                case "one":
-                                    current = "banner";
-                                    $('.content1').slick({autoplay: true});
-                                    break;
-                                case "banner":
-                                    break;
-                                default:
-                                    //asd
-                            }
-                            $("html, body").animate({ scrollTop: $('#' + current).offset().top }, 1000);
-                        }
-                        delta = null;
-                        $('body').removeClass('stop-scrolling');
-                        //return false; // this line is only added so the whole page won't scroll in the demo
-                    });
-                });*/
-
                 $('#header').hover(
                     function()
                     {
                         $('#header').addClass('dropotronheader');
                         $('#infoi').addClass('infoiopa');
-                    },
+                    });
+
+				$('#header').mouseleave(
                     function()
                     {
                         //Mouse leave dropotron
@@ -562,10 +504,10 @@
                                 function()
                                 {
                                     //do something special
-                                    if( ($('ul.dropotron.level-0.right').css('display') === 'none') && ($('#header:hover').length == 0) )
+                                    if( ($('ul.dropotron.level-0.right').css('display') === 'none'))
                                     {
-                                        $('#header').removeClass("dropotronheader");
-                                        setTimeout
+                                        $('#header').removeProp('class');
+                                        window.setTimeout
                                         (
                                             function()
                                             {
@@ -577,37 +519,26 @@
                             );
                         });
 
-                        //Mouse enter dropotron
-                        $('ul.dropotron.level-0.right').on('mouseenter', function()
-                        {
-                            //$('#header').addClass("dropotronheader");
-                        });
-
                         //Mouse leave hover without dropotron
-                        if ($('#header:hover').length == 0 && $('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
-                        {
-                            setTimeout
+                        if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+						{
+                            window.setTimeout
                             (
                                 function()
                                 {
-                                    //do something special
-                                    if( $('#header:hover').length == 0)
-                                    {
-                                        $('#header').removeClass("dropotronheader");
-                                        setTimeout
-                                        (
-                                            function()
-                                            {
-                                                $('#infoi').removeClass('infoiopa');
-                                            }, 100
-                                        );
-                                    }
+									//do something special
+									$('#header').removeAttr('class');
+									setTimeout
+									(
+										function()
+										{
+											$('#infoi').removeClass('infoiopa');
+										}, 100
+									);
                                 }, 300
                             );
-                        }
-                    }
-                );
-
+						}
+                    });
         </script>
 	</body>
 </html>

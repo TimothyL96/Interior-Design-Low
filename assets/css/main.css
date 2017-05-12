@@ -4166,7 +4166,6 @@ body.landing #header {
 
 #alignarrow:after {
         color: rgba(255, 255, 255, 0.75);
-        content: '▾';
         float: right;
     }
 
