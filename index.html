@@ -358,7 +358,7 @@
 				return false;
 			});
 
-			$('a[href*=#banner]').click(function(){
+			$('a[href*="#banner"]').click(function(){
 				$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 1000);
