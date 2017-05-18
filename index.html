@@ -30,8 +30,9 @@
         <link rel="icon" type="image/vnd.microsoft.icon" href="assets/css/images/myicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 
         <!-- Latest compiled and minified CSS -->
@@ -279,7 +280,7 @@
 					<li><a href="#" target="_blank" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Interior Design.</br></br>Developed by <a href="http://timothylampersonal.azurewebsites.net" target="_blank" >interiordesignlow.</a> Design: HTML5 UP</li><!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+					<li>&copy; Interior Design.<br><br>Developed by <a href="http://timothylampersonal.azurewebsites.net" target="_blank" >interiordesignlow.</a> Design: HTML5 UP</li><!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
 				</ul>
 			</footer>
 		</div>
@@ -294,12 +295,9 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-
-
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-		<!--<script src="jquery.scrollex.min.js"></script>-->
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
 		<!--Latest compiled and minified JavaScript-->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -323,25 +321,6 @@
 				}
 				$('#banner').fadeIn(700);
 			});
-
-				///*can cause lag
-			/*window.setInterval(function(){
-				/// call your function here
-				if ( $('.slick-current').hasClass("con1") )
-				{
-				   // $('#banner').css("background-image","url(images/banner.jpg)");
-					$('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
-				}
-				if ( $('.slick-current').hasClass("con2") )
-				{
-					$('#banner').css("background-image","url(images/12.jpg)");
-				}if ( $('.slick-current').hasClass("con3") )
-				{
-					$('#banner').css("background-image","url(images/five.jpeg)");
-				}
-				$('#banner').fadeIn(1000);
-				//aria-discribedby=slick-slide00
-			}, 400);//*/
 
 			$('a[href*=#five]').click(function(){
 				$('html, body').animate({
