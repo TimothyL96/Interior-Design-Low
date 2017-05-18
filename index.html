@@ -406,20 +406,20 @@
 
 			$('#header').mouseleave( function()
 			{
-				//Mouse leave hover without dropotron
 				if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
 				{
 					window.setTimeout
 					(
 						function()
 						{
-							//do something special
-							$('#header').removeAttr('class');
+							if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+								$('#header').removeAttr('class');
 							setTimeout
 							(
 								function()
 								{
-									$('#infoi').removeClass('infoiopa');
+									if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+										$('#infoi').removeClass('infoiopa');
 								}, 100
 							);
 						}, 150
