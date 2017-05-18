@@ -288,8 +288,8 @@
 
 		<!-- Scripts -->
 
-		<script src="assets/js/jquery.min.js"></script>
-		<!--<script src="http://code.jquery.com/jquery-1.12.4.js"></script>-->
+		<!--<script src="assets/js/jquery.min.js"></script>-->
+		<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
@@ -298,7 +298,8 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+		<!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>-->
+		<script type="text/javascript" src="/assets/js/slick.js"></script>
 
 		<!--Latest compiled and minified JavaScript-->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -323,35 +324,35 @@
 				$('#banner').fadeIn(700);
 			});
 
-			$('a[href*=#five]').click(function(){
+			$('a[href*="#five"]').click(function(){
 				$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 800);
 				return false;
 			});
 
-			$('a[href*=#four]').click(function(){
+			$('a[href*="#four"]').click(function(){
 				$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 800);
 				return false;
 			});
 
-			$('a[href*=#three]').click(function(){
+			$('a[href*="#three"]').click(function(){
 				$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 800);
 				return false;
 			});
 
-			$('a[href*=#two]').click(function(){
+			$('a[href*="#two"]').click(function(){
 				$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 800);
 				return false;
 			});
 
-			$('a[href*=#one]').click(function(){
+			$('a[href*="#one"]').click(function(){
 				$('html, body').animate({
 					scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 800);
