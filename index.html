@@ -152,7 +152,7 @@
                         </div>
                     </div>
                 </div>-->
-			
+
                 <!-- Controls -->
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -495,28 +495,7 @@
 				$('#header').mouseleave(
                     function()
                     {
-                        //Mouse leave dropotron
-                        $('ul.dropotron.level-0.right').on('mouseleave', function()
-                        {
-                            setTimeout
-                            (
-                                function()
-                                {
-                                    //do something special
-                                    if( ($('ul.dropotron.level-0.right').css('display') === 'none'))
-                                    {
-                                        $('#header').removeProp('class');
-                                        window.setTimeout
-                                        (
-                                            function()
-                                            {
-                                                $('#infoi').removeClass('infoiopa');
-                                            }, 100
-                                        );
-                                    }
-                                }, 800
-                            );
-                        });
+
 
                         //Mouse leave hover without dropotron
                         if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
