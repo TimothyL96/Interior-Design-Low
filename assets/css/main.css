@@ -4138,10 +4138,7 @@ body.landing #header {
      transition: all 0.4s ease-in-out !important;
     opacity: 40% !important;
 }
-/*
-#header:hover + #infoi {
-    opacity: 0;
-}*/
+
 .infoiopa{
     opacity: 0 !important;
 }

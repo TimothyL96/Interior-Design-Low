@@ -81,7 +81,6 @@
 			<!-- Banner -->
             <section id="banner">
                 <div class="content1">
-                    <div class="con1">
                         <header>
                             <h2>The future of design has landed</h2>
                             <p>And there are no hoverboards or flying cars.<br />
@@ -89,24 +88,6 @@
                         </header>
                         <!--//Image 316x316-->
                         <span class="image"><img src="images/banner.jpg" alt="" /></span>
-
-                    </div>
-                    <div class="con2">
-                       <header>
-                            <h2>Slide !!!!!</h2>
-                            <p>weeehaaa.<br />
-                            Just creative design. Lots of new design.</p>
-                        </header>
-                        <span class="image"><img src="images/banner1.jpg" alt="" /></span>
-                    </div>
-                    <div class="con3">
-                       <header>
-                            <h2>Slide two</h2>
-                            <p>wooohoooo.<br />
-                            Just creative design. Lots of new design.</p>
-                        </header>
-                       <span class="image"><img src="images/pic01.jpg" alt="" /></span>
-                         </div>
                 </div>
                 <a href="#one" class="goto-next scrolly">Next</a>
 			</section>
@@ -228,7 +209,6 @@
 				</div>
 			</section>-->
 
-
 			<!-- Five -->
 			<section id="five" class="wrapper style2 special fade-up">
 				<div class="container">
@@ -268,7 +248,6 @@
 				</div>
 			</section>
 
-
 			<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
@@ -280,16 +259,14 @@
 					<li><a href="#" target="_blank" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Interior Design.<br><br>Developed by <a href="http://www.lamtimothy.com" target="_blank" >Timothy Lam.</a> Template: HTML5 UP</li>
+					<li>&copy; Interior Design.<br><br>Developed by <a href="http://www.lamtimothy.com" target="_blank" >Timothy Lam.</a><!-- Template: HTML5 UP--></li>
 				</ul>
 			</footer>
 		</div>
 		<!--</div>-->
 
 		<!-- Scripts -->
-		<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-		<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.dropotron.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -297,74 +274,12 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-		<!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>-->
 		<script type="text/javascript" src="./assets/js/slick.js"></script>
 
 		<!--Latest compiled and minified JavaScript-->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<script type="text/javascript">
-			$('.content1').slick({draggable: false
-								 ,dots: true, autoplay: true, pauseOnDotsHover: true, fade: true, autoplaySpeed: 4000});
-
-			$('.slick-arrow, .slick-dots button').on("click", function()
-			{
-				if ( $('.slick-active').hasClass("con1") )
-				{
-					$('#banner').css("background-image","url(images/ElysiumLayout_12.jpg)");
-				}
-				if ( $('.slick-active').hasClass("con2") )
-				{
-					$('#banner').css("background-image","url(images/12.jpg)");
-				}if ( $('.slick-active').hasClass("con3") )
-				{
-					$('#banner').css("background-image","url(images/five.jpeg)");
-				}
-				$('#banner').fadeIn(700);
-			});
-
-			$('a[href*="#five"]').click(function(){
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-				return false;
-			});
-
-			$('a[href*="#four"]').click(function(){
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-				return false;
-			});
-
-			$('a[href*="#three"]').click(function(){
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-				return false;
-			});
-
-			$('a[href*="#two"]').click(function(){
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-				return false;
-			});
-
-			$('a[href*="#one"]').click(function(){
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-				return false;
-			});
-
-			$('a[href*="#banner"]').click(function(){
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 1000);
-				return false;
-			});
-
 			$('#header').hover( function()
 			{
 					$('#header').addClass('dropotronheader');
