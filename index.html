@@ -80,7 +80,7 @@
 
 			<!-- Banner -->
             <section id="banner">
-                <div class="content1">
+                <div class="content">
                         <header>
                             <h2>The future of design has landed</h2>
                             <p>And there are no hoverboards or flying cars.<br />
@@ -280,33 +280,53 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<script type="text/javascript">
-			$('#header').hover( function()
+			$(function ()
 			{
+				$('#header').hover( function()
+				{
 					$('#header').addClass('dropotronheader');
 					$('#infoi').addClass('infoiopa');
-			});
+				});
 
-			$('#header').mouseleave( function()
-			{
-				if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+				$('#header').mouseleave( function()
 				{
-					window.setTimeout
-					(
-						function()
+					if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+					{
+						window.setTimeout
+						(
+							function()
+							{
+								if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+								{
+									$('#header').removeAttr('class');
+
+									setTimeout
+									(
+										function()
+										{
+											$('#infoi').removeClass('infoiopa');
+										}, 100
+									);
+								}
+							}, 150
+						);
+					}
+				});
+
+				$('ul.dropotron.level-0.right').mouseleave( function ()
+				{
+					console.log("leave!");
+					window.setTimeout(
+						function ()
 						{
 							if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
+							{
 								$('#header').removeAttr('class');
-							setTimeout
-							(
-								function()
-								{
-									if ($('#layouts:hover').length == 0 && $('ul.dropotron.level-0.right:hover').length == 0)
-										$('#infoi').removeClass('infoiopa');
-								}, 100
-							);
-						}, 150
+								$('#infoi').removeClass('infoiopa');
+							}
+						}, 100
 					);
-				}
+				});
 			});
         </script>
 	</body>
