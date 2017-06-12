@@ -1,4 +1,8 @@
-Freelance project : http://interiordesignlow.azurewebsites.net/
+Freelance project : http://intdesign.azurewebsites.net/ <br><br>
+This current existing codes are easy to reproduce.<br>That's why this repository is now public. <br><br>
+Discontinued <br>
+
+![Front Page](/images/Capture.PNG?raw=true "Front Page")
 
 
 Landed by HTML5 UP
@@ -25,7 +29,6 @@ n33.co @n33co dribbble.com/n33
 
 
 Credits:
-
 	Demo Images:
 		Unsplash (unsplash.com)
 
