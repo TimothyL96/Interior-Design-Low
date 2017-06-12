@@ -1,4 +1,7 @@
-Freelance project : http://interiordesignlow.azurewebsites.net/
+Freelance project : http://intdesign.azurewebsites.net/
+Discontinued
+
+![Front Page](/images/Capture.PNG?raw=true "Front Page")
 
 
 Landed by HTML5 UP
@@ -25,7 +28,6 @@ n33.co @n33co dribbble.com/n33
 
 
 Credits:
-
 	Demo Images:
 		Unsplash (unsplash.com)
 
