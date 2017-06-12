@@ -1,5 +1,5 @@
 Freelance project : http://intdesign.azurewebsites.net/ <br><br>
-This current existing codes are easy to reproduce. That's why this repository is now public. <br>
+This current existing codes are easy to reproduce.<br>That's why this repository is now public. <br><br>
 Discontinued <br>
 
 ![Front Page](/images/Capture.PNG?raw=true "Front Page")
