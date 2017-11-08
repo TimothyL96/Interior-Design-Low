@@ -1,3 +1,6 @@
+# Interior Design Low
+#### A web project for a interior designer to display their designs with galleries and such
+
 Freelance project : http://intdesign.azurewebsites.net/ <br><br>
 This current existing codes are easy to reproduce.<br>That's why this repository is now public. <br><br>
 Discontinued <br>
